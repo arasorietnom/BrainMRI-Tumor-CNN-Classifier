@@ -1,13 +1,36 @@
+**Brain Tumor Classification using CNN**
 
+**Dataset**
+The dataset consists of MRI images classified into two folders:
+
+yes: Contains 155 MRI images with brain tumors.
+
+no: Contains 98 MRI images without brain tumors.
 
 
 **Methodology**
+
+In short... The approach includes several key phases:
+
+- Data Preparation: Download and preprocess images to uniform sizes and formats.
+- Model Development: Design a CNN architecture suitable for binary classification of images.
+- Training: Use backpropagation and an Adam optimizer to train the CNN on the prepared dataset.
+- Evaluation: Assess the model's performance with a confusion matrix and accuracy measurements.
+- Visualization: Display sample results and errors to provide insights into the model's effectiveness.
+
+*Model Architecture*
+The CNN model consists of:
+
+- Two convolutional layers with Tanh activations and average pooling.
+- Three fully connected layers with Tanh activations leading to a sigmoid output for binary classification.
+
+
+***Comprehensive Methodology***
 1. Data Acquisition and Preparation
-- Dataset Access: The dataset is acquired from Kaggle (https://https://www.kaggle.com/datasets/navoneel/brain-mri-images-for-brain-tumor-detection), containing MRI images with brain tumors
-   ("yes" directory for positive samples) and without ("no" directory for negative samples)
+- Dataset Access: The dataset is acquired from Kaggle (see below), containing MRI images with brain tumors
 - File Handling: The dataset is downloaded and extracted using Python's zipfile module,
    ensuring that all the necessary image files are accessible for processing.
-  - Directories: directories to both subfolders are defined
+  - Directories: directories to both subfolders are defined ("yes" directory for positive samples) and without ("no" directory for negative samples)
 2. Data Pre-processing
 - Image Loading and Transformation: Images are loaded and resized to a uniform size (128x128
      pixels) using OpenCV to standardize the input for the neural network. They are also
@@ -36,3 +59,6 @@ Loss Function: Binary Cross-Entropy Loss is used as it is suitable for binary cl
 8. Deployment Preparation
   - Model Saving and Loading: For operational use, the trained model can be saved and later
     loaded to make predictions on new MRI images.
+
+
+Original Dataset: (https://https://www.kaggle.com/datasets/navoneel/brain-mri-images-for-brain-tumor-detection)
